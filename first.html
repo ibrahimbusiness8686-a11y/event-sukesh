@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Registration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 18px;
+
+            border: 1px solid #ccc;
+            border-radius: 7px;
+
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4facfe;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+        }
+
+        .radio-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .terms input {
+            width: auto;
+            margin: 0;
+        }
+
+        .terms label {
+            margin: 0;
+            font-weight: normal;
+        }
+
+        button {
+            padding: 14px;
+
+            background-color: #007bff;
+            color: white;
+
+            border: none;
+            border-radius: 7px;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h1>Event Registration</h1>
+
+            <p class="description">
+                Register now and reserve your place!
+            </p>
+
+            <form>
+
+                <!-- Full Name -->
+                <label for="name">Full Name</label>
+
+                <input type="text" id="name" placeholder="Enter your full name" required>
+
+
+                <!-- Email -->
+                <label for="email">Email Address</label>
+
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+
+                <!-- Phone -->
+                <label for="phone">Phone Number</label>
+
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+
+                <!-- Event -->
+                <label for="event">Select Event</label>
+
+                <select id="event" required>
+
+                    <option value="">
+                        -- Choose an Event --
+                    </option>
+
+                    <option value="technology">
+                        Technology Conference
+                    </option>
+
+                    <option value="business">
+                        Business Meetup
+                    </option>
+
+                    <option value="workshop">
+                        Web Development Workshop
+                    </option>
+
+                    <option value="music">
+                        Music Festival
+                    </option>
+
+                </select>
+
+
+                <!-- Date -->
+                <label for="date">Event Date</label>
+
+                <input type="date" id="date" required>
+
+
+                <!-- Number of attendees -->
+                <label for="attendees">
+                    Number of Attendees
+                </label>
+
+                <input type="number" id="attendees" min="1" max="10" placeholder="Enter number of attendees" required>
+
+
+                <!-- Gender -->
+                <label>Gender</label>
+
+                <div class="radio-group">
+
+                    <label>
+                        <input type="radio" name="gender" value="male">
+                        Male
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="female">
+                        Female
+                    </label>
+
+                    <label>
+                        <input type="radio" name="gender" value="other">
+                        Other
+                    </label>
+
+                </div>
+
+
+                <!-- Message -->
+                <label for="message">
+                    Additional Message
+                </label>
+
+                <textarea id="message" rows="4" placeholder="Any special requirements?"></textarea>
+
+
+                <!-- Terms -->
+                <div class="terms">
+
+                    <input type="checkbox" id="terms" required>
+
+                    <label for="terms">
+                        I agree to the terms and conditions
+                    </label>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button type="submit">
+                    Register Now
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
